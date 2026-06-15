@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keranjang | AuresaGlow</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            light: '#FAF6F0',
+                            primary: '#D4A373',
+                            dark: '#1F3A2B',
+                            rose: '#FCEADE'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+
+<body class="bg-brand-light font-sans text-gray-800">
+
+    <header class="bg-white shadow-sm sticky top-0 z-40">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="../index.html" class="flex items-center gap-2">
+                <div class="w-10 h-10 bg-brand-dark text-brand-primary rounded-full flex items-center justify-center font-serif text-xl font-bold">
+                    AG
+                </div>
+                <div>
+                    <h1 class="font-serif text-2xl font-black text-brand-dark leading-none">AuresaGlow</h1>
+                    <p class="text-[9px] uppercase tracking-widest text-brand-primary font-bold">Organic Cosmetics</p>
+                </div>
+            </a>
+
+            <a href="../index.html" class="text-sm font-bold text-brand-dark hover:text-brand-primary">
+                Kembali ke Beranda
+            </a>
+        </div>
+    </header>
+
+    <section class="py-20">
+        <div class="container mx-auto px-4 max-w-4xl">
+
+            <div class="text-center mb-12">
+                <span class="text-brand-primary font-bold uppercase text-sm tracking-widest">Keranjang Belanja</span>
+                <h2 class="font-serif text-4xl font-black text-brand-dark mt-2">
+                    Produk Pilihan Anda
+                </h2>
+                <p class="text-gray-500 mt-3 text-sm">
+                    Cek kembali produk sebelum melanjutkan ke transaksi.
+                </p>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-md border p-6">
+                <div id="cartList" class="space-y-4">
+                    <!-- isi keranjang dari JS -->
+                </div>
+
+                <div class="border-t mt-6 pt-6 flex justify-between items-center">
+                    <span class="font-bold text-brand-dark">Total Pembayaran:</span>
+                    <span id="cartTotal" class="font-serif text-2xl font-black text-brand-primary">Rp 0</span>
+                </div>
+
+                <div class="mt-8 flex flex-col sm:flex-row gap-4">
+                    <a href="../index.html" class="w-full text-center border border-brand-dark text-brand-dark py-3 rounded-lg font-bold hover:bg-brand-dark hover:text-white transition">
+                        Lanjut Belanja
+                    </a>
+
+                    <button onclick="checkoutCart()" class="w-full bg-brand-primary text-white py-3 rounded-lg font-bold hover:bg-brand-dark transition">
+                        Checkout Sekarang
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="bg-brand-dark text-white py-8 text-center">
+        <p class="text-sm text-gray-300">
+            &copy; 2026 AuresaGlow Organic Cosmetics.
+        </p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>

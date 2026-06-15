@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facial Wash | AuresaGlow</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            light: '#FAF6F0',
+                            primary: '#D4A373',
+                            dark: '#1F3A2B',
+                            accent: '#E9C46A',
+                            rose: '#FCEADE'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+
+<body class="bg-brand-light font-sans text-gray-800">
+
+    <!-- HEADER -->
+    <header class="bg-white shadow-sm sticky top-0 z-40">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="../index.html" class="flex items-center gap-2">
+                <div class="w-10 h-10 bg-brand-dark text-brand-primary rounded-full flex items-center justify-center font-serif text-xl font-bold">
+                    AG
+                </div>
+                <div>
+                    <h1 class="font-serif text-2xl font-black text-brand-dark leading-none">AuresaGlow</h1>
+                    <p class="text-[9px] uppercase tracking-widest text-brand-primary font-bold">Organic Cosmetics</p>
+                </div>
+            </a>
+
+            <nav class="hidden md:flex gap-6 text-sm font-semibold">
+                <a href="../index.html" class="hover:text-brand-primary">Beranda</a>
+                <a href="facialwash.html" class="hover:text-brand-primary">Facial Wash</a>
+                <a href="sunscreen.html" class="hover:text-brand-primary">Sunscreen</a>
+                <a href="pelembab.html" class="text-brand-primary">Moisturizer</a>
+            </nav>
+
+            <a href="cart.html" class="text-brand-dark hover:text-brand-primary font-bold text-sm">
+                🛒
+                <span id="cartCount">(0)</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- HERO KATEGORI -->
+    <section class="py-20 bg-brand-rose">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+            <div>
+                <span class="text-brand-primary font-bold uppercase text-sm tracking-widest">Kategori Produk</span>
+                <h2 class="font-serif text-4xl md:text-6xl font-black text-brand-dark mt-3">
+                    Moisturizer
+                </h2>
+                <p class="text-gray-600 mt-5 leading-relaxed">
+                    Moisturizer adalah produk perawatan kulit yang berfungsi menghidrasi, mengunci kelembapan, serta memperbaiki lapisan pelindung kulit (skin barrier)
+                </p>
+
+                <a href="#produk" class="inline-block mt-8 bg-brand-dark text-white px-7 py-3 rounded-lg font-bold hover:bg-brand-primary transition">
+                    Lihat Produk
+                </a>
+            </div>
+
+            <div>
+                <img src="https://image.popbela.com/post/20250115/5c55e745e68990ecaf37c4ea37f59886.jpg"
+                     alt="Moisturizer"
+                     class="w-full h-[360px] object-cover rounded-2xl shadow-xl"
+                     onerror="this.onerror=null;this.src='https://placehold.co/600x400/FAF6F0/1F3A2B?text=Facial+Wash';">
+            </div>
+        </div>
+    </section>
+
+    <!-- INFO KATEGORI -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-brand-light p-6 rounded-2xl border">
+                <h3 class="font-serif text-xl font-bold text-brand-dark mb-3">Manfaat</h3>
+                <p class="text-sm text-gray-600">
+                    Menjaga kelembapan kulit agar tetap lembut dan sehat, Membantu memperkuat skin barrier kulit, Mengurangi risiko kulit kering dan iritasi.
+                </p>
+            </div>
+
+            <div class="bg-brand-light p-6 rounded-2xl border">
+                <h3 class="font-serif text-xl font-bold text-brand-dark mb-3">Cara Pakai</h3>
+                <p class="text-sm text-gray-600">
+                    Bersihkan wajah terlebih dahulu, Ambil moisturizer secukupnya, Oleskan secara merata ke wajah dan leher
+                </p>
+            </div>
+
+            <div class="bg-brand-light p-6 rounded-2xl border">
+                <h3 class="font-serif text-xl font-bold text-brand-dark mb-3">Waktu Penggunaan</h3>
+                <p class="text-sm text-gray-600">
+                    Dapat digunakan setelah mencuci wajah untuk menjaga kelembapan kulit sepanjang hari
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUK FACIAL WASH -->
+    <section id="produk" class="py-20 bg-brand-light">
+        <div class="container mx-auto px-4">
+
+            <div class="text-center max-w-2xl mx-auto mb-14">
+                <span class="text-brand-primary font-bold uppercase text-sm tracking-widest">Pilihan Produk</span>
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-brand-dark mt-2">
+                    Rekomendasi Moisturizer
+                </h2>
+                <p class="text-gray-500 mt-3 text-sm">
+                    Pilih produk Moisturizer sesuai kebutuhan kulit wajah Anda.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <!-- Produk 1 -->
+                <a href="../detail/pelembab-1.html" class="block">
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border group">
+                        <div class="aspect-[4/3] overflow-hidden">
+                            <img src="https://mir-s3-cdn-cf.behance.net/projects/404/01236c165798521.Y3JvcCwyMDc2LDE2MjQsNDA2LDA.jpg"
+                                 alt="NPURE Marigold Memory Bounce Moisturizer"
+                                 class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        </div>
+
+                        <div class="p-6">
+                            <h3 class="font-serif text-xl font-bold text-brand-dark">
+                                NPURE Marigold Memory Bounce Moisturizer
+                            </h3>
+                            <p class="text-gray-600 text-sm mt-3">
+                                Produk NPURE Marigold Memory Bounce Moisturizer merupakan pelembap wajah (moisturizer) siang dan malam yang diformulasikan khusus sebagai perawatan anti-aging (penuaan dini)
+                            </p>
+                            <div class="mt-5 flex justify-between items-center">
+                                <span class="font-bold text-brand-primary">Rp 120.000</span>
+                                <span class="text-xs font-bold text-brand-dark hover:text-brand-primary">
+                                    Lihat Detail →
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Produk 2 -->
+                <a href="../detail/pelembab-2.html" class="block">
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border group">
+                        <div class="aspect-[4/3] overflow-hidden">
+                            <img src="https://img01.ztat.net/article/spp-media-p1/e5e947262fbb4f73899b0ab3b9170257/86a7729a6e73464a920296a883130839.jpg?imwidth=762"
+                                 alt="Estée Lauder Revitalizing Supreme+ Night Intensive Restorative Crème"
+                                 class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        </div>
+
+                        <div class="p-6">
+                            <h3 class="font-serif text-xl font-bold text-brand-dark">
+                                Estée Lauder Revitalizing Supreme+ Night Intensive Restorative Crème
+                            </h3>
+                            <p class="text-gray-600 text-sm mt-3">
+                                Krim multi-aksi yang kaya dan sangat menutrisi ini MEREVITALISASI dengan Ekstrak Moringa 2X lebih pekat dan membantu menyalakan kembali kekuatan kulit
+                            </p>
+                            <div class="mt-5 flex justify-between items-center">
+                                <span class="font-bold text-brand-primary">Rp 2.899.000</span>
+                                <span class="text-xs font-bold text-brand-dark hover:text-brand-primary">
+                                    Lihat Detail →
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Produk 3 -->
+                <a href="../detail/pelembab-3.html" class="block">
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border group">
+                        <div class="aspect-[4/3] overflow-hidden">
+                            <img src="https://static3.sabinacdn.com/30145-thickbox_default/revitalizing-supreme-youth-power-soft-creme-moisturizer-estee-lauder.jpg"
+                                 alt="Estée Lauder Revitalizing Supreme+ Youth Power Soft Creme"
+                                 class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        </div>
+
+                        <div class="p-6">
+                            <h3 class="font-serif text-xl font-bold text-brand-dark">
+                                Estée Lauder Revitalizing Supreme+ Youth Power Soft Creme
+                            </h3>
+                            <p class="text-gray-600 text-sm mt-3">
+                                krim anti-aging premium untuk mengembalikan kekencangan, kekuatan, dan kilau alami kulit, sekaligus memberikan efek wajah yang tampak lebih terangkat (lifted look)
+                            </p>
+                            <div class="mt-5 flex justify-between items-center">
+                                <span class="font-bold text-brand-primary">Rp 1.850.000</span>
+                                <span class="text-xs font-bold text-brand-dark hover:text-brand-primary">
+                                    Lihat Detail →
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="../index.html" class="inline-block border border-brand-dark text-brand-dark px-7 py-3 rounded-lg font-bold hover:bg-brand-dark hover:text-white transition">
+                    ← Kembali ke Beranda
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-dark text-white py-8 text-center">
+        <p class="text-sm text-gray-300">
+            &copy; 2026 AuresaGlow Organic Cosmetics. Hak Cipta Dilindungi.
+        </p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="../js/script.js"></script>
+
+</body>
+</html>

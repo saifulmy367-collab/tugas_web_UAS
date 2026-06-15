@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AuresaGlow | Website Skincare Organik UAS Pemrograman Web Dasar</title>
+    
+    <!-- CDN Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CDN jQuery untuk Interaktivitas Slider dan fitur analisis -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <!-- Konfigurasi Kustom Warna Tema dengan Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            light: '#FAF6F0',   /* Soft Cream */
+                            primary: '#D4A373', /* Warm Amber Gold */
+                            dark: '#1F3A2B',    /* Deep Forest Green */
+                            accent: '#E9C46A',  /* Pale Yellow Accent */
+                            rose: '#FCEADE'     /* Soft Rose Peach */
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>    <link rel="stylesheet" href="style/style.css">
+</head>
+<body class="bg-brand-light font-sans text-gray-800 antialiased selection:bg-brand-primary selection:text-white">
+
+    <!-- HEADER -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100 transition-all duration-300">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            
+            <!-- Logo Toko Skincare -->
+            <a href="#" class="flex items-center gap-2 group">
+                <div class="w-10 h-10 bg-brand-dark text-brand-primary rounded-full flex items-center justify-center font-serif text-xl font-bold group-hover:scale-105 transition-transform">
+                    AG
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-serif text-2xl font-black text-brand-dark tracking-wide leading-none">AuresaGlow</span>
+                    <span class="text-[9px] uppercase tracking-widest text-brand-primary font-bold">Organic Cosmetics</span>
+                </div>
+            </a>
+
+            <!-- Menu Navigasi Desktop -->
+            <nav class="hidden md:flex items-center gap-8 font-semibold text-sm">
+                <a href="#home" class="nav-link text-brand-dark hover:text-brand-primary transition-colors py-2">
+                    Beranda
+                </a>
+            
+                <a href="#kategori" class="nav-link text-brand-dark hover:text-brand-primary transition-colors py-2">
+                    Kategori Produk
+                </a>
+            
+                <a href="#keunggulan" class="nav-link text-brand-dark hover:text-brand-primary transition-colors py-2">
+                    Formulasi Alam
+                </a>
+            
+                <a href="#analisis" class="nav-link text-brand-dark hover:text-brand-primary transition-colors py-2">
+                    Analisis Kulit
+                </a>
+            
+                <a href="pages/cart.html"
+                   class="text-brand-dark hover:text-brand-primary transition-colors py-2 font-bold">
+                    🛒
+                    <span id="cartCount">(0)</span>
+                </a>
+            </nav>
+
+            <!-- Tombol Hamburger Menu Responsif Mobile -->
+            <button id="mobileMenuBtn" class="md:hidden p-2 text-brand-dark focus:outline-none" aria-label="Menu">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+        </div>
+
+        <!-- Menu Dropdown Responsif Mobile -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-gray-100 py-4 px-6 space-y-3 shadow-lg absolute w-full left-0">
+            <a href="#home" class="block text-brand-dark hover:text-brand-primary font-medium py-2">Beranda</a>
+            <a href="#kategori" class="block text-brand-dark hover:text-brand-primary font-medium py-2">Kategori Produk</a>
+            <a href="#keunggulan" class="block text-brand-dark hover:text-brand-primary font-medium py-2">Formulasi Alam</a>
+            <a href="#analisis" class="block text-brand-dark hover:text-brand-primary font-medium py-2">Analisis Kulit</a>
+        </div>
+    </header>
+
+    
+    <!-- SLIDER / CAROUSEL UTAMA -->
+    <section id="home" class="relative bg-brand-rose overflow-hidden min-h-[500px] md:h-[600px] flex items-center">
+        
+        <!-- Slide 01: Serum Vitamin C -->
+        <div class="slider-item active w-full h-full">
+            <div class="container mx-auto px-4 py-16 md:py-0 flex flex-col-reverse md:flex-row items-center justify-between gap-8">
+                <!-- Sisi Deskripsi Slide -->
+                <div class="w-full md:w-1/2 space-y-6 text-center md:text-left">
+                    <span class="inline-block bg-brand-primary/10 text-brand-primary px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">Paling Direkomendasikan</span>
+                    <h1 class="font-serif text-4xl md:text-6xl font-bold text-brand-dark leading-tight">Shiseido Anessa Perfect UV Sunscreen Skincare Milk SPF 50+ PA++++</h1>
+                    <p class="text-gray-600 text-base md:text-lg max-w-xl">tabir surya premium asal Jepang yang dilengkapi 50% skincare ingredients. Dikenal sebagai sunscreen tahan air dan gesekan, produk ini memiliki fitur inovatif yang perlindungannya justru semakin kuat saat terkena panas, keringat, dan kelembapan.</p>
+                    <div class="flex flex-wrap justify-center md:justify-start gap-4 pt-2">
+                        <a href="#kategori" class="border border-brand-dark text-brand-dark hover:bg-brand-dark/5 font-bold px-8 py-3.5 rounded-lg transition-colors text-sm">
+                            Lihat Kategori
+                        </a>
+                    </div>
+                </div>
+                <!-- Sisi Gambar Slide -->
+                <div class="w-full md:w-1/2 flex justify-center relative">
+                    <div class="absolute inset-0 bg-brand-primary/10 rounded-full blur-3xl -z-10 transform scale-75 animate-pulse"></div>
+                    <img src="https://binibeauty.com/cdn/shop/files/shiseido-anessa-sunscreen-binibeauty-nz-2.jpg?v=1763612014&width=750" alt="[Image of Vitamin C Serum]" class="rounded-2xl shadow-2xl object-cover w-72 h-72 md:w-96 md:h-96 border-4 border-white transform hover:scale-105 transition-transform duration-500" onerror="this.onerror=null;this.src='https://placehold.co/600x600/FAF6F0/1F3A2B?text=Anessa+Sunscreen';">
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 02: Gel Lidah Buaya -->
+        <div class="slider-item w-full h-full">
+            <div class="container mx-auto px-4 py-16 md:py-0 flex flex-col-reverse md:flex-row items-center justify-between gap-8">
+                <!-- Sisi Deskripsi Slide -->
+                <div class="w-full md:w-1/2 space-y-6 text-center md:text-left">
+                    <span class="inline-block bg-brand-primary/10 text-brand-primary px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">MEN'S CARE</span>
+                    <h2 class="font-serif text-4xl md:text-6xl font-bold text-brand-dark leading-tight">Gentle Facial Wash Avoskin Natural Sublime Facial Cleanser 100ml</h2>
+                    <p class="text-gray-600 text-base md:text-lg max-w-xl">sabun cuci muka berformula gentle dengan pH rendah yang membersihkan wajah tanpa merusak lapisan pelindung kulit (skin barrier).</p>
+                    <div class="flex flex-wrap justify-center md:justify-start gap-4 pt-2">
+                        <a href="#kategori" class="border border-brand-dark text-brand-dark hover:bg-brand-dark/5 font-bold px-8 py-3.5 rounded-lg transition-colors text-sm">
+                            Lihat Kategori
+                        </a>
+                    </div>
+                </div>
+                <!-- Sisi Gambar Slide -->
+                <div class="w-full md:w-1/2 flex justify-center relative">
+                    <div class="absolute inset-0 bg-brand-primary/10 rounded-full blur-3xl -z-10 transform scale-75 animate-pulse"></div>
+                    <img src="https://blog-admin.avoskinbeauty.com/wp-content/uploads/2022/03/basic-skincare-pria-2-min.jpg" alt="[Image of Aloe Vera Gel]" class="rounded-2xl shadow-2xl object-cover w-72 h-72 md:w-96 md:h-96 border-4 border-white transform hover:scale-105 transition-transform duration-500" onerror="this.onerror=null;this.src='https://placehold.co/600x600/FAF6F0/1F3A2B?text=Avoskin+Cleanser';">
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 03: Sunscreen Premium -->
+        <div class="slider-item w-full h-full">
+            <div class="container mx-auto px-4 py-16 md:py-0 flex flex-col-reverse md:flex-row items-center justify-between gap-8">
+                <!-- Sisi Deskripsi Slide -->
+                <div class="w-full md:w-1/2 space-y-6 text-center md:text-left">
+                    <span class="inline-block bg-brand-primary/10 text-brand-primary px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">HIDRASI 24 JAM</span>
+                    <h2 class="font-serif text-4xl md:text-6xl font-bold text-brand-dark leading-tight">Clarins Hydra-Essentiel [HA²] Silky Cream</h2>
+                    <p class="text-gray-600 text-base md:text-lg max-w-xl">Pelembap wajah harian premium asal Prancis yang diformulasikan khusus untuk pemilik jenis kulit normal hingga kering.Krim ini memiliki tekstur yang selembut sutra (silky), ringan, cepat meresap, dan berfokus pada hidrasi mendalam untuk mengatasi masalah kulit yang dehidrasi akibat perubahan cuaca maupun paparan AC.</p>
+                    <div class="flex flex-wrap justify-center md:justify-start gap-4 pt-2">
+                        <a href="#kategori" class="border border-brand-dark text-brand-dark hover:bg-brand-dark/5 font-bold px-8 py-3.5 rounded-lg transition-colors text-sm">
+                            Lihat Kategori
+                        </a>
+                    </div>
+                </div>
+                <!-- Sisi Gambar Slide -->
+                <div class="w-full md:w-1/2 flex justify-center relative">
+                    <div class="absolute inset-0 bg-brand-primary/10 rounded-full blur-3xl -z-10 transform scale-75 animate-pulse"></div>
+                    <img src="https://th.bing.com/th/id/OIP.w3_fzzvUZtJB0x4MIUWDWgAAAA?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3" alt="[Image of Sunscreen SPF 50]" class="rounded-2xl shadow-2xl object-cover w-72 h-72 md:w-96 md:h-96 border-4 border-white transform hover:scale-105 transition-transform duration-500" onerror="this.onerror=null;this.src='https://placehold.co/600x600/FAF6F0/1F3A2B?text=Sunscreen+SPF50';">
+                </div>
+            </div>
+        </div>
+
+        <!-- Tombol Panah Navigasi Manual (Kiri dan Kanan) -->
+        <button id="prevBtn" class="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/80 hover:bg-white text-brand-dark hover:text-brand-primary flex items-center justify-center shadow-lg transition-all focus:outline-none z-10" aria-label="Slide Sebelumnya">
+            <i class="fa-solid fa-chevron-left text-lg"></i>
+        </button>
+        <button id="nextBtn" class="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/80 hover:bg-white text-brand-dark hover:text-brand-primary flex items-center justify-center shadow-lg transition-all focus:outline-none z-10" aria-label="Slide Selanjutnya">
+            <i class="fa-solid fa-chevron-right text-lg"></i>
+        </button>
+
+        <!-- Titik Penanda Slide Terpilih (Dots Indicators) -->
+        <div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2.5 z-10">
+            <button class="dot-btn w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-all active" data-index="0" aria-label="Halaman Slide 1"></button>
+            <button class="dot-btn w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-all" data-index="1" aria-label="Halaman Slide 2"></button>
+            <button class="dot-btn w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-all" data-index="2" aria-label="Halaman Slide 3"></button>
+        </div>
+    </section>
+
+    <!-- 3. CONTAINER TIGA KOLOM KATEGORI PRODUK UTAMA -->
+    <section id="kategori" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            
+            <!-- Judul Bagian Kategori -->
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-brand-primary text-sm font-bold uppercase tracking-wider">Kategori Perawatan Utama</span>
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-brand-dark mt-2 mb-4">Pilih Kebutuhan Skincare Anda</h2>
+                <div class="w-16 h-1 bg-brand-primary mx-auto rounded"></div>
+                <p class="text-gray-500 mt-4 text-sm md:text-base">Mulai dari membersihkan wajah, melindungi kulit dari sinar matahari, hingga menjaga kelembapan harian. Klik salah satu kategori untuk melihat deskripsi lengkap, cara pakai, manfaat, dan produk sejenis.</p>
+            </div>
+
+            <!-- Grid 3 Kolom Responsif -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+            <!-- Facial Wash -->
+            <a href="pages/facialwash.html" class="block">
+                <div class="bg-brand-light rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group border border-gray-100">
+                
+                    <div class="relative overflow-hidden aspect-[4/3]">
+                        <img src="https://www.sociolla.com/cdn-cgi/image/w=500,format=auto,dpr=1.45/https://images.soco.id/b326c63d-4e51-46b1-ae4d-4824989c0d50-image-1-1625544910660"
+                             alt="Facial Wash"
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    
+                        <div class="absolute top-4 left-4 bg-brand-dark/80 text-brand-rose px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">
+                            kategori
+                        </div>
+                    </div>
+                
+                    <div class="p-6">
+                        <h3 class="font-serif text-xl font-bold text-brand-dark">
+                            Facial Wash
+                        </h3>
+                    
+                        <p class="text-gray-600 text-sm mt-3">
+                            Membersihkan wajah dari minyak, debu, dan kotoran
+                            untuk menjaga kulit tetap sehat dan segar.
+                        </p>
+                    </div>
+                
+                </div>
+            </a>
+
+            <!-- Sunscreen -->
+            <a href="pages/sunscreen.html" class="block">
+                <div class="bg-brand-light rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group border border-gray-100">
+                
+                    <div class="relative overflow-hidden aspect-[4/3]">
+                        <img src="https://supergoop.com/cdn/shop/files/unseen-sunscreen-10.jpg?v%3D1770137633%26width%3D2000&imgrefurl=https://supergoop.com/products/unseen-sunscreen-spf-50?srsltid%3DAfmBOopNgn6V0LmDUQURkgYR8xaA8zb7BXI_Kfg5eWjh8gd_dKCFAHt5&h=2000&w=2000&tbnid=o70ihGacjfRrUM&source=sa.im&usg=AI4_-kS7GK12W7VlIl4A6MskH6EGzy1LqQ&vet=1&docid=maqVntTS9tIvNM"
+                             alt="Sunscreen"
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    
+                        <div class="absolute top-4 left-4 bg-brand-dark/80 text-brand-rose px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">
+                            kategori
+                        </div>
+                    </div>
+                
+                    <div class="p-6">
+                        <h3 class="font-serif text-xl font-bold text-brand-dark">
+                            Sunscreen
+                        </h3>
+                    
+                        <p class="text-gray-600 text-sm mt-3">
+                            Melindungi kulit dari paparan sinar UV dan membantu
+                            mencegah kerusakan kulit akibat matahari.
+                        </p>
+                    </div>
+                
+                </div>
+            </a>
+
+            <!-- Pelembab -->
+            <a href="pages/pelembab.html" class="block">
+                <div class="bg-brand-light rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group border border-gray-100">
+                
+                    <div class="relative overflow-hidden aspect-[4/3]">
+                        <img src="https://image.popbela.com/post/20250115/5c55e745e68990ecaf37c4ea37f59886.jpg"
+                             alt="Pelembab"
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    
+                        <div class="absolute top-4 left-4 bg-brand-dark/80 text-brand-rose px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">
+                            kategori
+                        </div>
+                    </div>
+                
+                    <div class="p-6">
+                        <h3 class="font-serif text-xl font-bold text-brand-dark">
+                            Moisturizer
+                        </h3>
+                    
+                        <p class="text-gray-600 text-sm mt-3">
+                            Menjaga kelembapan kulit dan membantu memperkuat
+                            skin barrier agar tetap sehat.
+                        </p>
+                    </div>
+                
+                </div>
+            </a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- CONTAINER DUA KOLOM -->
+    <section id="keunggulan" class="py-20 bg-brand-rose/40">
+        <div class="container mx-auto px-4 space-y-24">
+            
+            <!-- Baris 1: Gambar di Kiri, Deskripsi di Kanan -->
+            <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+                <!-- Sisi Gambar Kiri -->
+                <div class="w-full lg:w-1/2 relative">
+                    <div class="absolute -top-4 -left-4 w-full h-full border-2 border-brand-primary rounded-2xl -z-10"></div>
+                    <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=600&q=80" alt="" class="w-full h-[320px] md:h-[420px] object-cover rounded-2xl shadow-xl">
+                    <div class="absolute bottom-6 right-6 bg-white py-4 px-6 rounded-xl shadow-lg border-l-4 border-brand-primary">
+                        <span class="block font-serif text-3xl font-black text-brand-dark">100%</span>
+                        <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Bahan Alami Pilihan</span>
+                    </div>
+                </div>
+                <!-- Sisi Deskripsi Kanan -->
+                <div class="w-full lg:w-1/2 space-y-6">
+                    <span class="text-brand-primary text-sm font-bold uppercase tracking-wider">Formula Kemurnian Botani</span>
+                    <h3 class="font-serif text-3xl md:text-4xl font-bold text-brand-dark leading-tight">Keindahan Terindah Dibangun Dari Kebaikan Alam</h3>
+                    <p class="text-gray-600 leading-relaxed text-sm md:text-base">AuresaGlow berkomitmen memberikan perawatan terbaik tanpa zat aditif berbahaya. Racikan produk kami sepenuhnya bebas dari paraben, alkohol keras, maupun pewangi sintetik yang berisiko merusak pertahanan kulit sensitif Anda.</p>
+                    <div class="space-y-3 pt-2">
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-full bg-brand-dark text-brand-rose flex items-center justify-center shrink-0 mt-1">
+                                <i class="fa-solid fa-circle-check text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-brand-dark text-sm md:text-base">Sertifikasi Laboratorium & BPOM</h4>
+                                <p class="text-xs md:text-sm text-gray-500">Seluruh kandungan lolos uji klinis dermatologis serta terdaftar resmi di BPOM.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-full bg-brand-dark text-brand-rose flex items-center justify-center shrink-0 mt-1">
+                                <i class="fa-solid fa-circle-check text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-brand-dark text-sm md:text-base">Peduli Lingkungan & Bebas Eksploitasi</h4>
+                                <p class="text-xs md:text-sm text-gray-500">Kami menerapkan sistem produksi ramah lingkungan dan sepenuhnya bebas uji coba hewan (cruelty-free).</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Baris 2: Deskripsi di Kiri, Gambar di Kanan -->
+            <div class="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-16">
+                <!-- Sisi Deskripsi Kiri -->
+                <div class="w-full lg:w-1/2 space-y-6">
+                    <span class="text-brand-primary text-sm font-bold uppercase tracking-wider">Metode Ekstraksi Mutakhir</span>
+                    <h3 class="font-serif text-3xl md:text-4xl font-bold text-brand-dark leading-tight">Teknologi Penyaringan Molekul Dingin</h3>
+                    <p class="text-gray-600 leading-relaxed text-sm md:text-base">Bahan alami segar disaring melalui teknologi mikroskopis bersuhu rendah di dalam fasilitas steril kami. Hal ini bertujuan agar vitamin, antioksidan, dan nutrisi penting tanaman tidak menguap rusak, serta tersimpan utuh di dalam produk perawatan wajah Anda.</p>
+                    <div class="grid grid-cols-2 gap-4 pt-2">
+                        <div class="p-4 bg-white rounded-xl shadow-sm border border-gray-100">
+                            <span class="block font-serif text-2xl font-bold text-brand-primary">14 Hari</span>
+                            <p class="text-xs text-gray-500 mt-1">Hasil nyata perbaikan tekstur wajah terasa lebih sehat merona.</p>
+                        </div>
+                        <div class="p-4 bg-white rounded-xl shadow-sm border border-gray-100">
+                            <span class="block font-serif text-2xl font-bold text-brand-primary">99%</span>
+                            <p class="text-xs text-gray-500 mt-1">Konsumen menyatakan tingkat kecocokan yang sangat tinggi.</p>
+                        </div>
+                    </div>
+                    <div class="pt-4">
+                        <a href="#kategori" class="inline-block bg-brand-primary hover:bg-brand-primary/95 text-white font-bold px-8 py-3.5 rounded-lg shadow-md hover:shadow-lg transition-all text-sm">
+                            Cari Produk Anda
+                        </a>
+                    </div>
+                </div>
+                <!-- Sisi Gambar Kanan -->
+                <div class="w-full lg:w-1/2 relative">
+                    <div class="absolute -top-4 -right-4 w-full h-full border-2 border-brand-primary rounded-2xl -z-10"></div>
+                    <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&w=600&q=80" alt="[Image of Bio Lab]" class="w-full h-[320px] md:h-[420px] object-cover rounded-2xl shadow-xl">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FITUR INTERAKTIF JQUERY: KALKULATOR TIPE KULIT -->
+    <section id="analisis" class="py-20 bg-white border-t border-brand-rose">
+        <div class="container mx-auto px-4 max-w-3xl">
+            <div class="text-center mb-12">
+                <span class="text-brand-primary text-sm font-bold uppercase tracking-wider">Fitur Diagnosa Mandiri</span>
+                <h2 class="font-serif text-3xl font-bold text-brand-dark mt-2">Uji Karakteristik Kulit Anda</h2>
+                <p class="text-gray-500 mt-2 text-sm">Temukan rekomendasi jenis produk terbaik yang sesuai dengan kondisi kelembapan dan sensitivitas kulit wajah Anda.</p>
+            </div>
+
+            <!-- Panel Form Kalkulator Kulit -->
+            <div class="bg-brand-light p-8 rounded-2xl shadow-md border border-gray-100 space-y-6">
+                <div>
+                    <label class="block font-bold text-brand-dark text-sm mb-2.5">1. Bagaimana kondisi dahi dan pipi Anda setelah satu jam mencuci wajah?</label>
+                    <select id="skinQ1" class="w-full p-3 rounded-lg border border-gray-200 bg-white focus:outline-none focus:border-brand-primary text-sm">
+                        <option value="dry">Sangat kering, berkerak, dan terasa ditarik kencang</option>
+                        <option value="oily">Sangat mengkilap dan dipenuhi rembesan minyak tebal</option>
+                        <option value="combi">Mengkilap di daerah dahi/hidung saja, tetapi pipi kering</option>
+                        <option value="normal">Lembab normal, terasa kenyal, dan seimbang tanpa minyak berlebih</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block font-bold text-brand-dark text-sm mb-2.5">2. Seberapa sering kulit wajah Anda mengalami bruntusan atau bercak kemerahan?</label>
+                    <select id="skinQ2" class="w-full p-3 rounded-lg border border-gray-200 bg-white focus:outline-none focus:border-brand-primary text-sm">
+                        <option value="yes">Hampir selalu, terlebih jika salah menggunakan sabun berbusa</option>
+                        <option value="no">Sangat jarang, kulit wajah cenderung kuat dan tidak reaktif</option>
+                    </select>
+                </div>
+
+                <button id="analyzeSkinBtn" class="w-full bg-brand-dark hover:bg-brand-primary text-white font-bold py-3.5 rounded-lg transition-colors shadow-md text-sm">
+                    Mulai Deteksi Kulit
+                </button>
+
+                <!-- Hasil Analisis Dinamis (Manipulasi DOM via jQuery) -->
+                <div id="skinResultPanel" class="hidden bg-white p-6 rounded-xl border border-brand-primary/30 space-y-3">
+                    <h4 class="font-serif text-lg font-bold text-brand-dark">Hasil Deteksi Sistem:</h4>
+                    <p class="text-sm">Jenis Kulit Wajah Anda: <strong id="skinResultText" class="text-brand-primary text-base">Menghitung...</strong></p>
+                    <div class="p-4 bg-brand-light rounded-lg">
+                        <h5 class="font-bold text-xs text-brand-dark uppercase tracking-wider mb-1">Rekomendasi Paket Perawatan:</h5>
+                        <p id="skinResultDesc" class="text-xs text-gray-600">Mengidentifikasi kebutuhan skincare...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. FOOTER (DENGAN INFORMASI LENGKAP UNIVERSITAS & UAS) - Bobot: 20 Poin -->
+    <footer class="bg-brand-dark text-white/90 py-16 border-t border-brand-primary/20">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+            
+            <!-- Kolom 1: Profil Brand & Medsos -->
+            <div class="space-y-4">
+                <div class="flex items-center gap-2">
+                    <div class="w-10 h-10 bg-brand-primary text-white rounded-full flex items-center justify-center font-serif text-xl font-bold">
+                        AG
+                    </div>
+                    <span class="font-serif text-2xl font-bold text-white tracking-wide">AuresaGlow</span>
+                </div>
+                <p class="text-sm text-gray-400 leading-relaxed">
+                    Kami menghadirkan jaminan keaslian bahan botani alami premium untuk menunjang perlindungan pertahanan kulit terbaik hari ini hingga masa depan Anda.
+                </p>
+                <div class="flex gap-4 pt-2">
+                    <a href="#" class="w-9 h-9 rounded-full bg-white/10 hover:bg-brand-primary text-white flex items-center justify-center transition-colors" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f text-sm"></i>
+                    </a>
+                    <a href="#" class="w-9 h-9 rounded-full bg-white/10 hover:bg-brand-primary text-white flex items-center justify-center transition-colors" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram text-sm"></i>
+                    </a>
+                    <a href="#" class="w-9 h-9 rounded-full bg-white/10 hover:bg-brand-primary text-white flex items-center justify-center transition-colors" aria-label="TikTok">
+                        <i class="fa-brands fa-tiktok text-sm"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Kolom 2: Navigasi Pintas Website -->
+            <div class="space-y-4">
+                <h4 class="font-serif text-lg font-bold text-brand-primary border-b border-white/10 pb-2">Peta Navigasi</h4>
+                <ul class="space-y-2.5 text-sm text-gray-400">
+                    <li><a href="#home" class="hover:text-brand-primary transition-colors block">Beranda Awal</a></li>
+                    <li><a href="#kategori" class="hover:text-brand-primary transition-colors block">Kategori Produk</a></li>
+                    <li><a href="#keunggulan" class="hover:text-brand-primary transition-colors block">Keunggulan Organik</a></li>
+                    <li><a href="#analisis" class="hover:text-brand-primary transition-colors block">Uji Tipe Kulit</a></li>
+                </ul>
+            </div>
+
+            <!-- Kolom 3: Kontak Informasi Resmi -->
+            <div class="space-y-4">
+                <h4 class="font-serif text-lg font-bold text-brand-primary border-b border-white/10 pb-2">Kontak Hubung</h4>
+                <ul class="space-y-3 text-sm text-gray-400">
+                    <li class="flex items-start gap-3">
+                        <i class="fa-solid fa-location-dot mt-1 text-brand-primary shrink-0"></i>
+                        <span>Jl. Slamet Riyadi No. 445, Laweyan, Kota Surakarta, Jawa Tengah</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i class="fa-solid fa-phone text-brand-primary shrink-0"></i>
+                        <span>+62 8186-9999-6368</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i class="fa-solid fa-envelope text-brand-primary shrink-0"></i>
+                        <span>support@auresaglow.co.id</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Kolom 4: Formulir Surat Berita (Newsletter) -->
+            <div class="space-y-4">
+                <h4 class="font-serif text-lg font-bold text-brand-primary border-b border-white/10 pb-2">Buletin Promo</h4>
+                <p class="text-sm text-gray-400">Bergabunglah untuk memperoleh kupon diskon istimewa serta info rilis formulasi terbaru.</p>
+                <form id="subscribeForm" class="flex flex-col gap-2">
+                    <input type="email" placeholder="Alamat Email Anda" class="bg-white/10 text-white placeholder:text-gray-500 rounded px-4 py-2.5 text-sm border border-white/20 focus:outline-none focus:border-brand-primary transition-colors" required>
+                    <button type="submit" class="bg-brand-primary hover:bg-brand-primary/90 text-white font-bold py-2.5 px-4 rounded text-sm transition-colors shadow-lg">
+                        Berlangganan Promo
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Bagian Hak Cipta & Dokumen Kelayakan Akademis UAS UNIBA -->
+        <div class="container mx-auto px-4 mt-12 pt-8 border-t border-white/10 text-center text-xs text-gray-500 space-y-4">
+            <div class="flex flex-wrap justify-between items-center gap-4">
+                <p>&copy; 2026 AuresaGlow Organic Cosmetics. Hak Cipta Dilindungi.</p>
+                <div class="flex gap-4">
+                    <a href="pages/tentangkami.html" class="hover:underline">Tentang Kami</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- LOGIKA JQUERY INTERAKTIF JALANNYA WEBSITE -->
+     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

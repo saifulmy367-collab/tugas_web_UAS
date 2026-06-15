@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami | AuresaGlow</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            light: '#FAF6F0',
+                            primary: '#D4A373',
+                            dark: '#1F3A2B',
+                            rose: '#FCEADE'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style/l_style.css">
+</head>
+
+<body class="bg-brand-light font-sans text-gray-800">
+
+    <section class="py-16">
+        <div class="container mx-auto px-4 max-w-4xl">
+
+            <div class="bg-white rounded-2xl shadow-lg border p-8 md:p-12">
+                <div class="text-center mb-10">
+                    <h1 class="font-serif text-4xl md:text-5xl font-black text-brand-dark">
+                        Tentang Kami
+                    </h1>
+                    <p class="text-gray-500 mt-4">
+                        Informasi singkat mengenai website AuresaGlow.
+                    </p>
+                </div>
+
+                <div class="space-y-6 text-gray-600 leading-relaxed">
+                    <p>
+                        AuresaGlow adalah website simulasi e-commerce produk skincare yang dibuat
+                        untuk memenuhi tugas Ujian Akhir Semester mata kuliah Pemrograman Web Dasar.
+                    </p>
+
+                    <p>
+                        Website ini menampilkan beberapa fitur seperti halaman beranda, kategori produk,
+                        detail produk, keranjang belanja, halaman transaksi, invoice pembelian, dan fitur
+                        cetak nota.
+                    </p>
+
+                    <div class="bg-brand-light rounded-xl p-6">
+                        <h2 class="font-serif text-2xl font-bold text-brand-dark mb-4">
+                            Teknologi yang Digunakan
+                        </h2>
+
+                        <ul class="list-disc list-inside space-y-2">
+                            <li>HTML untuk struktur halaman website</li>
+                            <li>CSS dan Tailwind CSS untuk tampilan</li>
+                            <li>JavaScript dan jQuery untuk interaksi</li>
+                            <li>Local Storage untuk simulasi penyimpanan keranjang</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-brand-light rounded-xl p-6">
+                        <h2 class="font-serif text-2xl font-bold text-brand-dark mb-4">
+                            Anggota Kelompok
+                        </h2>
+
+                        <ul class="space-y-2">
+                            <li>1. Audy Niken Phalup - (2025040007)</li>
+                            <li>2. Saiful Muhammad Yusuf - (2025040010)</li>
+                            <li>3. Said Abdul Amir - 2025040034</li>
+                            <li>4. Aprilianti Nur Rahmah - (2025040035)</li>
+                        </ul>
+                    </div>
+
+                    <p>
+                        Tujuan dari pembuatan website ini adalah untuk melatih pemahaman dasar mengenai
+                        pembuatan website responsif, pengelolaan halaman, penggunaan JavaScript, serta
+                        penyusunan alur sederhana seperti toko online.
+                    </p>
+                </div>
+
+                <div class="mt-10 flex flex-col sm:flex-row gap-4">
+                    <a href="../index.html"
+                       class="w-full text-center bg-brand-dark text-white py-3 rounded-lg font-bold hover:bg-brand-primary transition">
+                        Kembali ke Beranda
+                    </a>
+
+                    <a href="cart.html"
+                       class="w-full text-center border border-brand-dark text-brand-dark py-3 rounded-lg font-bold hover:bg-brand-dark hover:text-white transition">
+                        Lihat Keranjang
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+</html>

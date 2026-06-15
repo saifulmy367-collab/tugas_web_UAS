@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facial Wash | AuresaGlow</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            light: '#FAF6F0',
+                            primary: '#D4A373',
+                            dark: '#1F3A2B',
+                            accent: '#E9C46A',
+                            rose: '#FCEADE'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+
+<body class="bg-brand-light font-sans text-gray-800">
+
+    <!-- HEADER -->
+    <header class="bg-white shadow-sm sticky top-0 z-40">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="../index.html" class="flex items-center gap-2">
+                <div class="w-10 h-10 bg-brand-dark text-brand-primary rounded-full flex items-center justify-center font-serif text-xl font-bold">
+                    AG
+                </div>
+                <div>
+                    <h1 class="font-serif text-2xl font-black text-brand-dark leading-none">AuresaGlow</h1>
+                    <p class="text-[9px] uppercase tracking-widest text-brand-primary font-bold">Organic Cosmetics</p>
+                </div>
+            </a>
+
+            <nav class="hidden md:flex gap-6 text-sm font-semibold">
+                <a href="../index.html" class="hover:text-brand-primary">Beranda</a>
+                <a href="facialwash.html" class="text-brand-primary">Facial Wash</a>
+                <a href="sunscreen.html" class="hover:text-brand-primary">Sunscreen</a>
+                <a href="pelembab.html" class="hover:text-brand-primary">Moisturizer</a>
+            </nav>
+
+            <a href="cart.html" class="text-brand-dark hover:text-brand-primary font-bold text-sm">
+                🛒
+                <span id="cartCount">(0)</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- HERO KATEGORI -->
+    <section class="py-20 bg-brand-rose">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+            <div>
+                <span class="text-brand-primary font-bold uppercase text-sm tracking-widest">Kategori Produk</span>
+                <h2 class="font-serif text-4xl md:text-6xl font-black text-brand-dark mt-3">
+                    Facial Wash
+                </h2>
+                <p class="text-gray-600 mt-5 leading-relaxed">
+                    Facial wash adalah produk pembersih wajah yang membantu mengangkat minyak,
+                    debu, sisa sunscreen, dan kotoran yang menempel pada kulit. Produk ini
+                    cocok digunakan sebagai langkah awal dalam rutinitas skincare harian.
+                </p>
+
+                <a href="#produk" class="inline-block mt-8 bg-brand-dark text-white px-7 py-3 rounded-lg font-bold hover:bg-brand-primary transition">
+                    Lihat Produk
+                </a>
+            </div>
+
+            <div>
+                <img src="https://www.sociolla.com/cdn-cgi/image/w=500,format=auto,dpr=1.45/https://images.soco.id/b326c63d-4e51-46b1-ae4d-4824989c0d50-image-1-1625544910660"
+                     alt="Facial Wash"
+                     class="w-full h-[360px] object-cover rounded-2xl shadow-xl"
+                     onerror="this.onerror=null;this.src='https://placehold.co/600x400/FAF6F0/1F3A2B?text=Facial+Wash';">
+            </div>
+        </div>
+    </section>
+
+    <!-- INFO KATEGORI -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-brand-light p-6 rounded-2xl border">
+                <h3 class="font-serif text-xl font-bold text-brand-dark mb-3">Manfaat</h3>
+                <p class="text-sm text-gray-600">
+                    Membantu membersihkan wajah, mengurangi minyak berlebih, dan menjaga kulit tetap segar.
+                </p>
+            </div>
+
+            <div class="bg-brand-light p-6 rounded-2xl border">
+                <h3 class="font-serif text-xl font-bold text-brand-dark mb-3">Cara Pakai</h3>
+                <p class="text-sm text-gray-600">
+                    Basahi wajah, gunakan facial wash secukupnya, pijat lembut, lalu bilas sampai bersih.
+                </p>
+            </div>
+
+            <div class="bg-brand-light p-6 rounded-2xl border">
+                <h3 class="font-serif text-xl font-bold text-brand-dark mb-3">Waktu Penggunaan</h3>
+                <p class="text-sm text-gray-600">
+                    Gunakan pagi dan malam hari sebelum memakai skincare berikutnya.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUK FACIAL WASH -->
+    <section id="produk" class="py-20 bg-brand-light">
+        <div class="container mx-auto px-4">
+
+            <div class="text-center max-w-2xl mx-auto mb-14">
+                <span class="text-brand-primary font-bold uppercase text-sm tracking-widest">Pilihan Produk</span>
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-brand-dark mt-2">
+                    Rekomendasi Facial Wash
+                </h2>
+                <p class="text-gray-500 mt-3 text-sm">
+                    Pilih produk facial wash sesuai kebutuhan kulit wajah Anda.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <!-- Produk 1 -->
+                <a href="../detail/facialwash-1.html" class="block">
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border group">
+                        <div class="aspect-[4/3] overflow-hidden">
+                            <img src="https://id-test-11.slatic.net/p/df39f68d58fb9335436c2a387e897eac.jpg"
+                                 alt="SKIN1004 Madagascar Centella Ampoule Foam"
+                                 class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        </div>
+
+                        <div class="p-6">
+                            <h3 class="font-serif text-xl font-bold text-brand-dark">
+                                SKIN1004 Madagascar Centella Ampoule Foam
+                            </h3>
+                            <p class="text-gray-600 text-sm mt-3">
+                                kandungan centella untuk membersihkan kulit tanpa rasa tertarik, mengangkat debu, sisa makeup, berlebih hingga ke dalam pori-pori.
+                            </p>
+                            <div class="mt-5 flex justify-between items-center">
+                                <span class="font-bold text-brand-primary">Rp 220.000</span>
+                                <span class="text-xs font-bold text-brand-dark hover:text-brand-primary">
+                                    Lihat Detail →
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Produk 2 -->
+                <a href="../detail/facialwash-2.html" class="block">
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border group">
+                        <div class="aspect-[4/3] overflow-hidden">
+                            <img src="https://down-id.img.susercontent.com/file/id-11134207-7r990-lp1xxt0nrctdc2"
+                                 alt="SK-II Facial Treatment Gentle Cleanser"
+                                 class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        </div>
+
+                        <div class="p-6">
+                            <h3 class="font-serif text-xl font-bold text-brand-dark">
+                                SK-II Facial Treatment Gentle Cleanser
+                            </h3>
+                            <p class="text-gray-600 text-sm mt-3">
+                                Pembersih wajah dengan busa lembut yang membantu mengangkat kotoran dan minyak, dan sisa makeup secara menyeluruh dari dalam pori-pori
+                            </p>
+                            <div class="mt-5 flex justify-between items-center">
+                                <span class="font-bold text-brand-primary">Rp 635.000</span>
+                                <span class="text-xs font-bold text-brand-dark hover:text-brand-primary">
+                                    Lihat Detail →
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Produk 3 -->
+                <a href="../detail/facialwash-3.html" class="block">
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border group">
+                        <div class="aspect-[4/3] overflow-hidden">
+                            <img src="https://images.tokopedia.net/img/cache/700/o3syd0/1997/1/1/41f05806a7924239918dd9f92d53fe94~.jpeg.webp"
+                                 alt="Kormesic Ceramide Gentle Cleansing Gel Face Wash"
+                                 class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        </div>
+
+                        <div class="p-6">
+                            <h3 class="font-serif text-xl font-bold text-brand-dark">
+                                Kormesic Ceramide Gentle Cleansing Gel Face Wash
+                            </h3>
+                            <p class="text-gray-600 text-sm mt-3">
+                                Membersihkan minyak berlebih, debu, dan kotoran secara mendalam tanpa merusak kelembapan alami wajah pembersih wajah
+                            </p>
+                            <div class="mt-5 flex justify-between items-center">
+                                <span class="font-bold text-brand-primary">Rp 300.000</span>
+                                <span class="text-xs font-bold text-brand-dark hover:text-brand-primary">
+                                    Lihat Detail →
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="../index.html" class="inline-block border border-brand-dark text-brand-dark px-7 py-3 rounded-lg font-bold hover:bg-brand-dark hover:text-white transition">
+                    ← Kembali ke Beranda
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-dark text-white py-8 text-center">
+        <p class="text-sm text-gray-300">
+            &copy; 2026 AuresaGlow Organic Cosmetics. Hak Cipta Dilindungi.
+        </p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="../js/script.js"></script>
+
+</body>
+</html>

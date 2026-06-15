@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKIN1004 Madagascar Centella Ampoule Foam | AuresaGlow</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            light: '#FAF6F0',
+                            primary: '#D4A373',
+                            dark: '#1F3A2B',
+                            accent: '#E9C46A',
+                            rose: '#FCEADE'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+
+<body class="bg-brand-light font-sans text-gray-800">
+
+    <!-- HEADER -->
+    <header class="bg-white shadow-sm sticky top-0 z-40">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="../index.html" class="flex items-center gap-2">
+                <div class="w-10 h-10 bg-brand-dark text-brand-primary rounded-full flex items-center justify-center font-serif text-xl font-bold">
+                    AG
+                </div>
+                <div>
+                    <h1 class="font-serif text-2xl font-black text-brand-dark leading-none">AuresaGlow</h1>
+                    <p class="text-[9px] uppercase tracking-widest text-brand-primary font-bold">Organic Cosmetics</p>
+                </div>
+            </a>
+
+            <nav class="hidden md:flex gap-6 text-sm font-semibold">
+                <a href="../index.html" class="hover:text-brand-primary">Beranda</a>
+                <a href="../pages/facialwash.html" class="text-brand-primary">Facial Wash</a>
+                <a href="../pages/sunscreen.html" class="hover:text-brand-primary">Sunscreen</a>
+                <a href="../pages/pelembab.html" class="hover:text-brand-primary">Moisturizer</a>
+            </nav>
+
+            <a href="../pages/cart.html" class="text-brand-dark hover:text-brand-primary font-bold text-sm">
+                🛒
+                <span id="cartCount">(0)</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- DETAIL PRODUK -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+            <!-- GAMBAR PRODUK -->
+            <div class="bg-brand-light rounded-3xl p-6 shadow-sm border border-gray-100">
+                <img src="https://down-id.img.susercontent.com/file/id-11134207-7r990-lp1xxt0nrctdc2"
+                     alt="SK-II Facial Treatment Gentle Cleanser"
+                     class="w-full h-[420px] object-cover rounded-2xl shadow-lg"
+                     onerror="this.onerror=null;this.src='https://placehold.co/600x600/FAF6F0/1F3A2B?text=Facial+Wash';">
+            </div>
+
+            <!-- INFORMASI PRODUK -->
+            <div>
+                <span class="inline-block bg-brand-primary/10 text-brand-primary px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest">
+                    Facial Wash
+                </span>
+
+                <h1 class="font-serif text-4xl md:text-5xl font-black text-brand-dark mt-5 leading-tight">
+                    SK-II Facial Treatment Gentle Cleanser 
+                </h1>
+
+                <p class="text-gray-600 mt-5 leading-relaxed">
+                    Produk ini merupakan sabun pembersih wajah bertekstur krim ekstra ringan yang menghasilkan busa lembut untuk mengangkat kotoran, minyak berlebih, dan sisa makeup secara menyeluruh dari dalam pori-pori. Diformulasikan dengan aroma alami mawar, pembersih ini dirancang khusus untuk membersihkan kulit tanpa memberikan efek kering atau rasa tertarik setelah dibilas.
+                </p>
+
+                <div class="mt-6 flex items-center gap-4">
+                    <span class="font-serif text-3xl font-bold text-brand-primary">
+                        Rp 635.000
+                    </span>
+                    <span class="text-xs bg-green-100 text-green-700 font-bold px-3 py-1 rounded-full">
+                        Tersedia
+                    </span>
+                </div>
+
+                <div class="mt-8 flex flex-col sm:flex-row gap-4">
+                    <button onclick="addToCart('SK-II Facial Treatment Gentle Cleanser', 635000, 'https://down-id.img.susercontent.com/file/id-11134207-7r990-lp1xxt0nrctdc2')"
+                        class="bg-brand-dark hover:bg-brand-primary text-white px-8 py-3.5 rounded-lg font-bold shadow-md transition">
+                        Masukkan Keranjang
+                    </button>
+
+                    <a href="../pages/facialwash.html"
+                       class="border border-brand-dark text-brand-dark px-8 py-3.5 rounded-lg font-bold text-center hover:bg-brand-dark hover:text-white transition">
+                        Kembali ke Kategori
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- MANFAAT DAN CARA PAKAI -->
+    <section class="py-16 bg-brand-light">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8">
+
+            <div class="bg-white rounded-2xl p-8 shadow-sm border">
+                <h2 class="font-serif text-2xl font-bold text-brand-dark mb-4">
+                    Manfaat Produk
+                </h2>
+
+                <ul class="space-y-3 text-gray-600 text-sm">
+                    <li>✓ Membantu membersihkan wajah dari minyak dan kotoran.</li>
+                    <li>✓ Memberikan sensasi kulit terasa segar setelah dibilas.</li>
+                    <li>✓ Cocok untuk digunakan sebagai langkah awal skincare harian.</li>
+                    <li>✓ Membantu menjaga kulit tetap nyaman dan tidak terasa tertarik.</li>
+                </ul>
+            </div>
+
+            <div class="bg-white rounded-2xl p-8 shadow-sm border">
+                <h2 class="font-serif text-2xl font-bold text-brand-dark mb-4">
+                    Cara Pakai
+                </h2>
+
+                <ol class="space-y-3 text-gray-600 text-sm list-decimal list-inside">
+                    <li>Basahi wajah terlebih dahulu dengan air bersih.</li>
+                    <li>Tuangkan facial wash secukupnya ke telapak tangan.</li>
+                    <li>Pijat lembut pada wajah dengan gerakan memutar.</li>
+                    <li>Bilas hingga bersih, lalu lanjutkan dengan skincare berikutnya.</li>
+                </ol>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PRODUK SEJENIS -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-brand-primary font-bold uppercase text-sm tracking-widest">
+                    Produk Sejenis
+                </span>
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-brand-dark mt-2">
+                    Rekomendasi Facial Wash Lainnya
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+
+                <a href="facialwash-1.html" class="block">
+                    <div class="bg-brand-light rounded-2xl p-5 flex gap-5 items-center hover:shadow-lg transition border">
+                        <img src="https://id-test-11.slatic.net/p/df39f68d58fb9335436c2a387e897eac.jpg"
+                             alt="SKIN1004 Madagascar Centella Ampoule Foam"
+                             class="w-28 h-28 object-cover rounded-xl">
+
+                        <div>
+                            <h3 class="font-bold text-brand-dark">
+                                SKIN1004 Madagascar Centella Ampoule Foam
+                            </h3>
+                            <p class="text-sm text-gray-500 mt-1">
+                                kandungan centella untuk membersihkan kulit tanpa rasa tertarik
+                            </p>
+                            <p class="font-bold text-brand-primary mt-2">
+                                Rp 220.000
+                            </p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="facialwash-3.html" class="block">
+                    <div class="bg-brand-light rounded-2xl p-5 flex gap-5 items-center hover:shadow-lg transition border">
+                        <img src="https://images.tokopedia.net/img/cache/700/o3syd0/1997/1/1/41f05806a7924239918dd9f92d53fe94~.jpeg.webp"
+                             alt="Kormesic Ceramide Gentle Cleansing Gel Face Wash"
+                             class="w-28 h-28 object-cover rounded-xl">
+
+                        <div>
+                            <h3 class="font-bold text-brand-dark">
+                                Kormesic Ceramide Gentle Cleansing Gel Face Wash
+                            </h3>
+                            <p class="text-sm text-gray-500 mt-1">
+                                Membersihkan minyak berlebih, debu, dan kotoran
+                            </p>
+                            <p class="font-bold text-brand-primary mt-2">
+                                Rp 300.000
+                            </p>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-dark text-white py-8 text-center">
+        <p class="text-sm text-gray-300">
+            &copy; 2026 AuresaGlow Organic Cosmetics. Hak Cipta Dilindungi.
+        </p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>

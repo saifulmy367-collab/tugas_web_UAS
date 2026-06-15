@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice | AuresaGlow</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            light: '#FAF6F0',
+                            primary: '#D4A373',
+                            dark: '#1F3A2B',
+                            rose: '#FCEADE'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+
+<body class="bg-brand-light font-sans text-gray-800">
+
+    <section class="py-16">
+        <div class="container mx-auto px-4 max-w-3xl">
+
+            <div class="bg-white rounded-2xl shadow-lg border p-8">
+                <div class="text-center mb-8">
+                    <div class="w-16 h-16 rounded-full bg-green-100 text-green-600 flex items-center justify-center mx-auto text-3xl mb-4">
+                        ✓
+                    </div>
+
+                    <h1 class="font-serif text-4xl font-black text-brand-dark">
+                        Invoice Pembelian
+                    </h1>
+
+                    <p class="text-gray-500 text-sm mt-2">
+                        Transaksi berhasil dibuat. Berikut rincian pesanan Anda.
+                    </p>
+                </div>
+
+                <div class="bg-brand-light rounded-xl p-5 text-sm space-y-2 mb-6">
+                    <p><strong>Nama:</strong> <span id="invoiceName">-</span></p>
+                    <p><strong>WhatsApp:</strong> <span id="invoicePhone">-</span></p>
+                    <p><strong>Alamat:</strong> <span id="invoiceAddress">-</span></p>
+                    <p><strong>Metode Pembayaran:</strong> <span id="invoicePayment">-</span></p>
+                </div>
+
+                <div class="mb-6">
+                    <h2 class="font-serif text-2xl font-bold text-brand-dark mb-4">
+                        Daftar Produk
+                    </h2>
+
+                    <div id="invoiceItems" class="space-y-4">
+                        <!-- Diisi JS -->
+                    </div>
+                </div>
+
+                <div class="border-t pt-5 space-y-3">
+                    <div class="flex justify-between text-sm">
+                        <span class="text-gray-500">Subtotal Produk</span>
+                        <span id="invoiceSubtotal" class="font-bold">Rp 0</span>
+                    </div>
+
+                    <div class="flex justify-between text-sm">
+                        <span class="text-gray-500">Ongkos Kirim</span>
+                        <span id="invoiceShipping" class="font-bold">Rp 10.000</span>
+                    </div>
+
+                    <div class="flex justify-between text-lg">
+                        <span class="font-bold text-brand-dark">Total Pembayaran</span>
+                        <span id="invoiceTotal" class="font-serif font-black text-brand-primary">Rp 0</span>
+                    </div>
+                </div>
+
+                <div class="mt-8 flex flex-col sm:flex-row gap-4">
+                    <button onclick="window.print()"
+                            class="w-full bg-brand-dark text-white py-3 rounded-lg font-bold hover:bg-brand-primary transition">
+                        Cetak Nota
+                    </button>
+
+                    <a href="../index.html"
+                       onclick="localStorage.removeItem('cart'); localStorage.removeItem('buyerData');"
+                       class="w-full text-center border border-brand-dark text-brand-dark py-3 rounded-lg font-bold hover:bg-brand-dark hover:text-white transition">
+                        Kembali ke Beranda
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>

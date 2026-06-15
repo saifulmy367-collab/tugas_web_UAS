@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facial Wash | AuresaGlow</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            light: '#FAF6F0',
+                            primary: '#D4A373',
+                            dark: '#1F3A2B',
+                            accent: '#E9C46A',
+                            rose: '#FCEADE'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+
+<body class="bg-brand-light font-sans text-gray-800">
+
+    <!-- HEADER -->
+    <header class="bg-white shadow-sm sticky top-0 z-40">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="../index.html" class="flex items-center gap-2">
+                <div class="w-10 h-10 bg-brand-dark text-brand-primary rounded-full flex items-center justify-center font-serif text-xl font-bold">
+                    AG
+                </div>
+                <div>
+                    <h1 class="font-serif text-2xl font-black text-brand-dark leading-none">AuresaGlow</h1>
+                    <p class="text-[9px] uppercase tracking-widest text-brand-primary font-bold">Organic Cosmetics</p>
+                </div>
+            </a>
+
+            <nav class="hidden md:flex gap-6 text-sm font-semibold">
+                <a href="../index.html" class="hover:text-brand-primary">Beranda</a>
+                <a href="facialwash.html" class="hover:text-brand-primary">Facial Wash</a>
+                <a href="sunscreen.html" class="text-brand-primary">Sunscreen</a>
+                <a href="pelembab.html" class="hover:text-brand-primary">Moisturizer</a>
+            </nav>
+
+            <a href="cart.html" class="text-brand-dark hover:text-brand-primary font-bold text-sm">
+                🛒
+                <span id="cartCount">(0)</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- HERO KATEGORI -->
+    <section class="py-20 bg-brand-rose">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+            <div>
+                <span class="text-brand-primary font-bold uppercase text-sm tracking-widest">Kategori Produk</span>
+                <h2 class="font-serif text-4xl md:text-6xl font-black text-brand-dark mt-3">
+                    sunscrean
+                </h2>
+                <p class="text-gray-600 mt-5 leading-relaxed">
+                    produk perawatan kulit yang berfungsi sebagai perisai pelindung untuk menjaga kulit dari paparan radiasi sinar ultraviolet (UV) A dan UVB dari matahari.
+                </p>
+
+                <a href="#produk" class="inline-block mt-8 bg-brand-dark text-white px-7 py-3 rounded-lg font-bold hover:bg-brand-primary transition">
+                    Lihat Produk
+                </a>
+            </div>
+
+            <div>
+                <img src="https://supergoop.com/cdn/shop/files/unseen-sunscreen-10.jpg?v%3D1770137633%26width%3D2000&imgrefurl=https://supergoop.com/products/unseen-sunscreen-spf-50?srsltid%3DAfmBOopNgn6V0LmDUQURkgYR8xaA8zb7BXI_Kfg5eWjh8gd_dKCFAHt5&h=2000&w=2000&tbnid=o70ihGacjfRrUM&source=sa.im&usg=AI4_-kS7GK12W7VlIl4A6MskH6EGzy1LqQ&vet=1&docid=maqVntTS9tIvNM"
+                     alt="Sunscreen"
+                     class="w-full h-[360px] object-cover rounded-2xl shadow-xl"
+                     onerror="this.onerror=null;this.src='https://placehold.co/600x400/FAF6F0/1F3A2B?text=Facial+Wash';">
+            </div>
+        </div>
+    </section>
+
+    <!-- INFO KATEGORI -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-brand-light p-6 rounded-2xl border">
+                <h3 class="font-serif text-xl font-bold text-brand-dark mb-3">Manfaat</h3>
+                <p class="text-sm text-gray-600">
+                    Melindungi kulit dari paparan sinar UV, Membantu mencegah kulit kusam dan belang, Mengurangi risiko penuaan dini akibat sinar matahari.
+                </p>
+            </div>
+
+            <div class="bg-brand-light p-6 rounded-2xl border">
+                <h3 class="font-serif text-xl font-bold text-brand-dark mb-3">Cara Pakai</h3>
+                <p class="text-sm text-gray-600">
+                    Bersihkan wajah terlebih dahulu, Oleskan sunscreen secara merata pada wajah dan leher, Gunakan kembali setiap 2–3 jam saat beraktivitas di luar ruangan.
+                </p>
+            </div>
+
+            <div class="bg-brand-light p-6 rounded-2xl border">
+                <h3 class="font-serif text-xl font-bold text-brand-dark mb-3">Waktu Penggunaan</h3>
+                <p class="text-sm text-gray-600">
+                    Pagi hari sebelum memulai aktivitas, 15–20 menit sebelum keluar rumah agar sunscreen bekerja optimal, Siang hari dengan aplikasi ulang jika terpapar sinar matahari dalam waktu lama.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUK FACIAL WASH -->
+    <section id="produk" class="py-20 bg-brand-light">
+        <div class="container mx-auto px-4">
+
+            <div class="text-center max-w-2xl mx-auto mb-14">
+                <span class="text-brand-primary font-bold uppercase text-sm tracking-widest">Pilihan Produk</span>
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-brand-dark mt-2">
+                    Rekomendasi Sunscreen
+                </h2>
+                <p class="text-gray-500 mt-3 text-sm">
+                    Pilih produk Sunscreen sesuai kebutuhan kulit wajah Anda.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <!-- Produk 1 -->
+                <a href="../detail/sunscreen-1.html" class="block">
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border group">
+                        <div class="aspect-[4/3] overflow-hidden">
+                            <img src="https://down-id.img.susercontent.com/file/id-11134207-7r98q-lx0voqev9q1q4a"
+                                 alt="Shiseido The Perfect Protector SPF 50+ PA++++"
+                                 class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        </div>
+
+                        <div class="p-6">
+                            <h3 class="font-serif text-xl font-bold text-brand-dark">
+                                Shiseido The Perfect Protector SPF 50+ PA++++
+                            </h3>
+                            <p class="text-gray-600 text-sm mt-3">
+                                ProdukTabir surya (sunscreen) mewah bersertifikat asal Jepang ini dirancang untuk wajah dan tubuh dengan formula losion yang sangat ringan, nyaman
+                            </p>
+                            <div class="mt-5 flex justify-between items-center">
+                                <span class="font-bold text-brand-primary">Rp 1.284.000</span>
+                                <span class="text-xs font-bold text-brand-dark hover:text-brand-primary">
+                                    Lihat Detail →
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Produk 2 -->
+                <a href="../detail/sunscreen-2.html" class="block">
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border group">
+                        <div class="aspect-[4/3] overflow-hidden">
+                            <img src="https://images.soco.id/507-23.jpg.jpeg"
+                                 alt="Trueve Cerashield Hybrid Sunscreen"
+                                 class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        </div>
+
+                        <div class="p-6">
+                            <h3 class="font-serif text-xl font-bold text-brand-dark">
+                                Trueve Cerashield Hybrid Sunscreen
+                            </h3>
+                            <p class="text-gray-600 text-sm mt-3">
+                                produk tabir surya yang menggabungkan keunggulan filter fisik (physical) dan kimia (chemical) untuk memberikan perlindungan maksimal
+                            </p>
+                            <div class="mt-5 flex justify-between items-center">
+                                <span class="font-bold text-brand-primary">Rp 200.000</span>
+                                <span class="text-xs font-bold text-brand-dark hover:text-brand-primary">
+                                    Lihat Detail →
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Produk 3 -->
+                <a href="../detail/sunscreen-3.html" class="block">
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border group">
+                        <div class="aspect-[4/3] overflow-hidden">
+                            <img src="https://cnfstore.com/pub/media/2_2_Thank_You_Farmer_Sun_Project_Water_Sun_Cream.png"
+                                 alt="Thank You Farmer Sun Project Water Sun Cream SPF50+ PA+++"
+                                 class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        </div>
+
+                        <div class="p-6">
+                            <h3 class="font-serif text-xl font-bold text-brand-dark">
+                                Thank You Farmer Sun Project Water Sun Cream SPF50+ PA+++
+                            </h3>
+                            <p class="text-gray-600 text-sm mt-3">
+                                Sangat ringan seperti losion cair (featherlight lotion) yang cepat meresap tanpa rasa lengket.
+                            </p>
+                            <div class="mt-5 flex justify-between items-center">
+                                <span class="font-bold text-brand-primary">Rp 290.000</span>
+                                <span class="text-xs font-bold text-brand-dark hover:text-brand-primary">
+                                    Lihat Detail →
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="../index.html" class="inline-block border border-brand-dark text-brand-dark px-7 py-3 rounded-lg font-bold hover:bg-brand-dark hover:text-white transition">
+                    ← Kembali ke Beranda
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-dark text-white py-8 text-center">
+        <p class="text-sm text-gray-300">
+            &copy; 2026 AuresaGlow Organic Cosmetics. Hak Cipta Dilindungi.
+        </p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="../js/script.js"></script>
+
+</body>
+</html>
